@@ -16,17 +16,20 @@ getlet()
 function getlet() {
     compPick = letter[Math.floor(Math.random() * letter.length)];
     // letter set getting user guess
+    guess = 1
     console.log(compPick)
 }
 document.onkeypress = function (event) {
     
     userGuess = event.key;
-    console.log(userGuess)
-
+    // console.log(userGuess)
+    winstext.textContent = " Wins: " + wins;
+     losstext.textContent = " Losses: " + loss;
+     guesstext.textContent = " Guess #: " + guess;
 
     if (userGuess === compPick) {
         wins++;
-        winstext.textContent = " Wins: " + wins;
+    winstext.textContent = " Wins: " + wins;
         alert("you win! " + wins);
         getlet();
         
@@ -37,22 +40,16 @@ document.onkeypress = function (event) {
         console.log(guess)
          if (guess === 10) {
              alert("you lose! " + loss);
-             guess = 1
+             // guess = 1
              loss++
              getlet();
          }
 
 
          else {
-            guesstext.textContent = " Guess #: " + guess;
             guess++;
+            guesstext.textContent = " You are on Guess #: " + guess; 
             alert("Guess Again");
         }
     }
 }
-
-
-
-
-
-
