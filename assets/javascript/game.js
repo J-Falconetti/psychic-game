@@ -17,7 +17,7 @@ getlet()
 function getlet() {
     compPick = letter[Math.floor(Math.random() * letter.length)];
     guess = 1
-    guesstext.textContent = " You are on Guess #: " + guess
+    guesstext.textContent = " Guess #: " + guess
     // letter set getting user guess
     guess = 1
     console.log(compPick)
@@ -33,7 +33,7 @@ document.onkeypress = function (event) {
     if (userGuess === compPick) {
         wins++;
     winstext.textContent = " Wins: " + wins;
-        alert("you win! ");
+        alert("Won you have. Strong in force are you");
         getlet();
         
     }
@@ -42,7 +42,7 @@ document.onkeypress = function (event) {
         
         // console.log(guess)
          if (guess === 10) {
-             alert("you lose! ");
+             alert(" ");
              guess = 1
              loss++
              losstext.textContent = " Losses: " + loss;
@@ -54,7 +54,7 @@ document.onkeypress = function (event) {
             guess++;
             console.log (guess);
             guessleft = (11 - guess);
-            guesstext.textContent = " You are on Guess #: " + guess+ " you have "+guessleft+ " guesses left"
+            guesstext.textContent = " Guess #: " + guess+ " you are on "+guessleft+ " have you left"
             alert("Guess Again");
         }
     }

@@ -1,3 +1,6 @@
+body {
+    color: lime
+}
 h1 {
     font-size: 50px;
 }
@@ -5,8 +8,8 @@ h2 {
     font-size: 30px;
 }
 body {
-    color: whitesmoke;
-    font-family: 'Srisakdi', cursive;
+    color: limegreen;
+    font-family: 'Patrick Hand SC', cursive;
     background-image: url('../images/bround.jpg');
     background-repeat: no-repeat;
     background-size: 100%, 100%;
